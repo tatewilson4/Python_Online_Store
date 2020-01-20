@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'checkout',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -137,3 +141,5 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR,'media')
 MEDIA_URL = '/media/'
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+STRIPE_SECRET_KEY = 'your test secret key'
+STRIPE_PUBLISHABLE_KEY = 'your test publishable key'
