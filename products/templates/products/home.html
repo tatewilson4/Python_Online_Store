@@ -1,32 +1,31 @@
-{% load static %}
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <title>Djago Ecommer | manascode.com</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            {% for product in object_list %}
-            <div class="col-md-4 col-sm-12 col-lg-3 m-1">
-                <div class="card" style='width:100%; height:300px;'>
-                    <img src="media/{{ product.mainimage }}" style="width:100%;" class="card-img-top" alt="{{ product.name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text">{{ product.preview_text }}</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="cart/{{ product.slug }}" class="btn btn-success">Add to Cart</a>
-                        <a href="remove/{{ product.slug }}" class="btn btn-danger">Remove from Cart</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</body>
-</html>
+{% extends 'products/base.html' %}
+{% block content %}
+  <div class="container my-5">
+  	<h2 class="my-5">Featured Products</h2>
+    <div class="row">
+      {% for product in object_list %}
+		  <div class="col-md-6 col-sm-12 col-lg-3">
+			<figure class="card card-product">
+				<div class="img-wrap">
+					<img src="media/{{ product.mainimage }}" style="width: 100%; height: 300px;">
+				</div>
+				<figcaption class="info-wrap">
+					<h6 class="title text-dots"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h6>
+
+					<div class="action-wrap">
+						<!-- <a href="cart/{{ product.slug }}" class="btn btn-primary btn-sm"> Add to Cart </a>
+            			<a href="cart/" class="btn btn-primary btn-sm"> View Cart </a> -->
+<!--             <a href="remove/{{ product.slug }}" class="btn btn-danger btn-sm"> Remove</a>
+ -->						<!-- price-wrap.// -->
+						 <div class="price-wrap h5">
+							<span class="price-new">${{product.price}}</span>
+							<del class="price-old">$1980</del>
+						</div>
+					</div> <!-- action-wrap -->
+				</figcaption>
+			</figure> <!-- card // -->
+		</div> <!-- col // -->
+      {% endfor %}
+  </div>
+  </div>
+{% endblock %}
