@@ -17,7 +17,9 @@ class Cart(models.Model):
 
     #Getting the total price of the cart
     def get_total(self):
-        return self.item.price * self.quantity
+        total = self.item.price * self.quantity
+        floattotal = float("{0:.2f}".format(total))
+        return floattotal
 
 # Order Model
 class Order(models.Model):
