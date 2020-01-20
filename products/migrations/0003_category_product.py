@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('myapp', '0002_delete_todo'),
+        ('products', '0002_delete_todo'),
     ]
 
     operations = [
@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('preview_text', models.TextField(max_length=200, verbose_name='Preview Text')),
                 ('detail_text', models.TextField(max_length=1000, verbose_name='Detail Text')),
                 ('price', models.FloatField()),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapp.Category')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.Category')),
             ],
         ),
     ]
