@@ -19,7 +19,7 @@ def add_to_cart(request, slug):
             order_item.quantity +=1
             order_item.save()
             messages.info(request, "This item quantity was updated.")
-            return redirect("mainapp:home")
+            return redirect("mainapp:cart-home")
         else:
             order.orderitems.add(order_item)
             messages.info(request, "This item was added to your cart.")
