@@ -141,5 +141,5 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR,'media')
 MEDIA_URL = '/media/'
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
-STRIPE_SECRET_KEY = 'your test secret key'
-STRIPE_PUBLISHABLE_KEY = 'your test publishable key'
+STRIPE_SECRET_KEY = 'sk_test_UPePb6T8fNR6xTlCKiluIZTc001NuzR8jw'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_GckvTY9zkNXqm9fCbOTGWkj700cnI5hqxQ'
