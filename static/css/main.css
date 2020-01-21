@@ -25,3 +25,24 @@
     border-radius: 4px;
     cursor: zoom-in;
 }
+/* pushing the footer to the bottom if there is no data in the body */
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+footer, .push {
+    height: 155px; /* remember to keep the push the same height as .footer */
+}
+
+/* footer icon image size */
+
+.icon_img {
+    height: 42px;
+    width: 42px;
+}
+
+.icon_img:hover {
+    opacity: .5;
+}
