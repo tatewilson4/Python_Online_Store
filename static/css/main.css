@@ -1,11 +1,103 @@
-#logo, #color-nav-links a {
-    color: #800000;
+
+
+li {
+    text-decoration: none;
+    list-style: none;
 }
 
-#logo:hover, #color-nav-links a:hover {
-    color: #800000;
+.navbar-brand {
+    font-size: 25px;
     color: black;
-    opacity: .8;
+}
+
+.navbar-large .nav-link {
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.navbar-large {
+    border-bottom: 1px solid black;
+    height: 110px;
+}
+
+.middle-nav, .username-or-login {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.bottom-middle-nav {
+    border-top: 1px solid black;
+    height: 55px;
+}
+
+.men-nav {
+    border-right: 1px solid black;
+}
+
+.elec-nav {
+    border-left: 1px solid black;
+}
+
+#search-bar {
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    color: black;
+    height: 55px;
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+/* .navbar-brand {
+    color: black;
+    border-right-style: solid;
+    border-width: 1px;
+    height: 110px;
+}
+
+.navbar {
+    transition: all 0.4s;
+    outline-style: solid;
+    outline-color: invert;
+    outline-width: thin;
+    height: 110px;
+
+}
+.navbar .nav-link {
+    color: black;
+}
+
+.navbar .navbar-nav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus, .navbar a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cart{
+    list-style: none;
+}
+#cart {
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+*/
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+
+    }
 }
 
 .carousel-inner img {
