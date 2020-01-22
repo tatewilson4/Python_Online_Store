@@ -14,6 +14,7 @@ li {
     color: black;
     text-transform: uppercase;
     font-size: 13px;
+    top: 50%;
 }
 .navbar-large {
     border-bottom: 1px solid black;
