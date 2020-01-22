@@ -1,10 +1,10 @@
 {% load cart_tag %}
 <title>Colywobbles</title>
 <nav class="navbar-large fixed-top">
-    <div class="container-fluid">
+    <div class="nav-contain container-fluid">
         <div class="row">
-            <div class="col" style="text-align:center">
-                <a class="navbar-brand font-weight-bold" href="/">clyw</a>
+            <div class="logo-nav col" style="text-align:right">
+                <a class="navbar-brand font-weight-bold" href="/">clly</a>
             </div>
             <div class="middle-nav col-8" style="text-align:center;vertical-align:middle;">
                 <form class="form-inline" action="/action_page.php">
@@ -16,7 +16,7 @@
                             <a class="nav-link" href="#">Men <span class="sr-only">(current)</span></a>
                         </li>
                     </div>
-                    <div class="col">
+                    <div class="women-nav col">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Women</a>
                         </li>
@@ -41,19 +41,19 @@
                         </li>
                         {% endif %}
                     </div>
-                    <div class="col">
+                    <div class="access-nav col">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Accessories</a>
                         </li>
                     </div>
-                    <div class="col elec-nav">
+                    <div class="elec-nav col">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Electronics</a>
                         </li>
                     </div>
                 </div>
             </div>
-            <div class="col" style="text-align:center">
+            <div class="cart-div col" style="text-align:center;">
                 <a id="cart" class="nav-link" href="#">
                     <i class="fa fa-shopping-cart"></i> Cart
                 </a>
