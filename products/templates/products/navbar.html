@@ -25,19 +25,19 @@
                         {% if request.user.is_authenticated %}
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{% url 'mainapp:cart-home' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-tie"></i> {{ request.user.username }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Dashboard</a>
                                 <a class="dropdown-item" href="{% url 'checkout:orderView' %}">Orders</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="/accounts/logout/">Logout</a>
                             </div>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a  class="btn btn-primary" href="/accounts/login/">Login / Register</a>
+                            <a  class="login-logout btn btn-primary" href="/accounts/login/">Login / Register</a>
                         </li>
                         {% endif %}
                     </div>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="cart-div col" style="text-align:center;">
-                <a id="cart" class="nav-link" href="#">
+                <a id="cart" class="nav-link" href="{% url 'mainapp:cart-home' %}">
                     <i class="fa fa-shopping-cart"></i> Cart
                 </a>
             </div>

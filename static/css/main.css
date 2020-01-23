@@ -14,7 +14,7 @@ li {
     padding-top: 26px;
 }
 
-.navbar-large .nav-link {
+.navbar-large .nav-link, .login-logout {
     color: black;
     text-transform: uppercase;
     font-size: 13px;
@@ -49,6 +49,14 @@ li {
 
 .elec-nav {
     border-left: 1px solid black;
+}
+
+.login-logout {
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    color: black;
 }
 
 #search-bar {
