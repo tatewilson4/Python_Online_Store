@@ -19,5 +19,8 @@ class Product(models.Model):
     detail_text = models.TextField(max_length=1000, verbose_name='Detail Text')
     price = models.FloatField()
 
+
     def __str__(self):
         return self.name
+
+    
