@@ -11,12 +11,12 @@
                     <input id="search-bar" class="form-control mr-sm-2" type="text" placeholder="     Search" style="width:100%">
                 </form>
                 <div class="bottom-middle-nav row">
-                    <div class="col men-nav">
+                    <div class="col-2 men-nav">
                         <li {% if request.path == 'contact' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
                             <a class="nav-link" href="#">Men <span class="sr-only">(current)</span></a>
                         </li>
                     </div>
-                    <div class="women-nav col">
+                    <div class="women-nav col-2">
                         <li class="nav-item">
                             <a class="women-lsit nav-link" href="#">Women</a>
                         </li>
@@ -24,15 +24,15 @@
                     <div class="username-or-login col-4">
                         {% if request.user.is_authenticated %}
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'mainapp:cart-home' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item dropdown auth-dropdown" style="text-align:center;">
+                            <a class="login-logout nav-link dropdown-toggle" href="{% url 'mainapp:cart-home' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-tie"></i> {{ request.user.username }}
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Dashboard</a>
-                                <a class="dropdown-item" href="{% url 'checkout:orderView' %}">Orders</a>
+                            <div class="dropdown-menu nav-dropdown-item" aria-labelledby="navbarDropdown">
+                                <a class="login-logout dropdown-item" href="#">Dashboard</a>
+                                <a class="login-logout dropdown-item" href="{% url 'checkout:orderView' %}">Orders</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/accounts/logout/">Logout</a>
+                                <a class="login-logout dropdown-item" href="/accounts/logout/">Logout</a>
                             </div>
                         </li>
                         {% else %}
@@ -41,12 +41,12 @@
                         </li>
                         {% endif %}
                     </div>
-                    <div class="access-nav col">
+                    <div class="access-nav col-2">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Accessories</a>
                         </li>
                     </div>
-                    <div class="elec-nav col">
+                    <div class="elec-nav col-2">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Electronics</a>
                         </li>

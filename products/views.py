@@ -16,13 +16,13 @@ class ProductDetail(LoginRequiredMixin, DetailView):
 
 
 def featured_list(request, template_name='products/home.html'):
-    product = Product.objects.order_by('-id')[0:8]
+    product = Product.objects.all()
     data = {}
     data['object_list'] = product
     return render(request, template_name, data)
 
 def product_list(self):
-    product = Product.objects.all()
+    product = Product.objects.order_by('-id')[0:10]
     data = {}
     data['object_list'] = product
     return render(request, template_name, data)

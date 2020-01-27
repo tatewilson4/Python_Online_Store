@@ -18,9 +18,9 @@ class Product(models.Model):
     preview_text = models.TextField(max_length=200, verbose_name='Preview Text')
     detail_text = models.TextField(max_length=1000, verbose_name='Detail Text')
     price = models.FloatField()
-
+    featured_row_1 = models.BooleanField(default=False)
+    featured_row_2 = models.BooleanField(default=False)
+    featured_row_3 = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
-
-    
