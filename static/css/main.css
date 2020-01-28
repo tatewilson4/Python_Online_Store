@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 
 /* NAVBAR */
 .nav-contain {
@@ -33,6 +39,7 @@ li {
 
 .men-nav:hover a, .women-nav:hover a, .access-nav:hover a, .elec-nav:hover a, #cart i:hover, #cart:hover, .logo-nav:hover .navbar-brand {
     color: white;
+    text-align: center;
 }
 
 .men-nav:hover, .women-nav:hover, .access-nav:hover, .elec-nav:hover, .cart-div:hover, .logo-nav:hover {
@@ -42,7 +49,6 @@ li {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
 .navbar-large {
     border-bottom: 1px solid black;
     height: 110px;
@@ -120,6 +126,7 @@ li {
 }
 
 
+
 /* .navbar-brand {
     color: black;
     border-right-style: solid;
@@ -173,15 +180,15 @@ li {
 
 
 
-/* Change navbar styling on small viewports */
-/* CAROUSEL */
-@media (max-width: 991.98px) {
-
-    }
-}
 
 /*  BANNER */
-
+#scroll_to_featured::before {
+display: block;
+content: " ";
+margin-top: -65px;
+height: 65px;
+visibility: hidden;
+}
 
 
 
@@ -208,16 +215,48 @@ h6 a:hover {
 
 /* BODY */
 .addvertisment{
-    height: 400px;
+    height: 290px;
+    background-image: url("../img/noise3.png");
     background-color: white;
 }
 
-.addvertisment h1 {
+.down_arrow:hover {
+    transform: scale(1.1) rotateX(180deg);
+}
+.down_arrow {
+    transition: transform .5s ease;
+}
+
+.addvertisment a {
     text-transform: uppercase;
     text-align: center;
-    line-height: 400px;
-    font-family: "Courier-New";
-    font-size: 70px;
+    line-height: 290px;
+    font-size: 160px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+
+.down_arrow {
+    text-align: center;
+    transform: rotateX(180deg);
+
+}
+
+.img-hover-zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden !important; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
 }
 
 .row1, .row2, .row3 {
@@ -304,4 +343,33 @@ footer, .push {
 
 .icon_img:hover {
     opacity: .5;
+}
+
+
+
+@media (max-width: 1082px) {
+    #cart, .navbar-brand {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+    .navbar-large .nav-link, .login-logout {
+        font-size: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-large {
+        border-bottom: none;
+    }
+}
+
+.navbar-small {
+    border: none;
+    text-transform: uppercase;
+}
+#nav-brand-small {
+    font-size: 30px;
+}
+
+.username-or-login-small {
+    border: none;
 }
