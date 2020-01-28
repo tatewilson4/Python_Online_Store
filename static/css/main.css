@@ -6,6 +6,39 @@ html {
 
 
 /* NAVBAR */
+.navbar-small {
+    border: none;
+    text-transform: uppercase;
+}
+#hamburger-small {
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+}
+#hamburger-dropdown:hover {
+    opacity: .5;
+    background-color: transparent;
+}
+
+#nav-brand-small {
+    font-size: 30px;
+}
+
+#nav-brand-small:hover, .navbar-small:hover {
+    opacity: .5;
+}
+
+
+.username-or-login-small {
+    border: none;
+}
+
+.hamburger-small{
+    background-color: transparent;
+    border: none;
+}
+
 .nav-contain {
     vertical-align: middle;
 }
@@ -360,16 +393,4 @@ footer, .push {
     .navbar-large {
         border-bottom: none;
     }
-}
-
-.navbar-small {
-    border: none;
-    text-transform: uppercase;
-}
-#nav-brand-small {
-    font-size: 30px;
-}
-
-.username-or-login-small {
-    border: none;
 }

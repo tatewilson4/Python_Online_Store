@@ -24,10 +24,19 @@
                 </li>
                 {% endif %}
             </div>
-            <button class="navbar-toggler navbar-small" style="float:right;" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div id="hamburger-small" class="dropdown navbar-toggler">
+                <button id="hamburger-small" class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="hamburger-small" class="navbar-toggler-icon"></span>
+                </button>
+                <div id="hamburger-small" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a id="hamburger-dropdown"class="dropdown-item" href="#">Men</a>
+                    <a id="hamburger-dropdown" class="dropdown-item" href="#">Women</a>
+                    <a id="hamburger-dropdown" class="dropdown-item" href="#">Accessories</a>
+                    <a id="hamburger-dropdown" class="dropdown-item" href="#">Electronics</a>
+                </div>
+            </div>
         </div>
+
         <div class="row collapse navbar-collapse">
             <div class="logo-nav col" style="text-align:right">
                 <a class="navbar-brand font-weight-bold" href="/">clly</a>
