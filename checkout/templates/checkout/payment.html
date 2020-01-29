@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="container mt-5 text-center">
+    <div class="push"></div>
 <h2>Pay with Stripe</h2>
 <form action="{% url 'checkout:charge' %}" method="post">
   {% csrf_token %}
@@ -15,5 +16,6 @@
 </form>
 
 </div>
+<div class="push"></div>
 <div class="push"></div>
 {% endblock %}
