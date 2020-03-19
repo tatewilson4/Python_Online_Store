@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -144,3 +145,5 @@ LOGIN_REDIRECT_URL = '/'
 STRIPE_SECRET_KEY = 'sk_live_Ssk1pWEDfvOE4xKxbzTCYIqS00M85P1Akb'
 STRIPE_PUBLISHABLE_KEY = 'pk_live_bUgDmZCJZwJyoYF5sX6ykxwQ00f3RPGZLh'
 ACCOUNT_USER_MODEL_EMAIL_FIELD = None
+
+django_heroku.settings(locals())
